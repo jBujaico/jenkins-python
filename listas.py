@@ -1,5 +1,11 @@
 import os
 import pandas as pd
+
+import sys
+
+# Define una codificación UTF-8 para la salida estándar
+sys.stdout.reconfigure(encoding='utf-8')
+
 List1 = [8, 9, 3, 6, 1, 10]
 List1.reverse()
 print("The reversed list is", List1)

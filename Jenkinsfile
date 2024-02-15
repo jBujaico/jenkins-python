@@ -1,14 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('version') {
-      steps {
-        sh 'py --version'
-      }
-    }
     stage('hello') {
       steps {
-        sh 'py hello.py'
+        sh 'C:\Users\hp\AppData\Local\Programs\Python\Python312\python.exe hello.py'
       }
     }
   }

@@ -14,3 +14,6 @@ print("List3 =", List3)
 
 indexvalue = List2[2:6]
 print("The index values are" , indexvalue)
+
+df = pd.read_csv("./credit.csv")
+print(df.head(5))

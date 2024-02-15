@@ -22,7 +22,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # URL de la página web a la que queremos hacer scraping
-url = 'https://elperuano.pe/'
+url = 'https://larepublica.pe/'
 
 # Realizamos la solicitud GET a la página
 response = requests.get(url)

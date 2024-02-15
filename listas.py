@@ -17,3 +17,27 @@ print("The index values are" , indexvalue)
 
 df = pd.read_csv("./credit.csv")
 print(df.head(5))
+
+import requests
+from bs4 import BeautifulSoup
+
+# URL de la página web a la que queremos hacer scraping
+url = 'https://example.com'
+
+# Realizamos la solicitud GET a la página
+response = requests.get(url)
+
+# Verificamos si la solicitud fue exitosa (código de estado 200)
+if response.status_code == 200:
+    # Parseamos el contenido HTML de la página utilizando BeautifulSoup
+    soup = BeautifulSoup(response.text, 'html.parser')
+    
+    # Encontramos todos los elementos <h2> que contienen los títulos de los artículos
+    titles = soup.find_all('h2')
+    
+    # Iteramos sobre los elementos encontrados e imprimimos el texto de cada uno
+    for title in titles:
+        print(title.text)
+else:
+    print('La solicitud no fue exitosa. Código de estado:', response.status_code)
+

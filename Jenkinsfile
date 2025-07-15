@@ -10,7 +10,7 @@ pipeline {
 
         stage('Ejecutar ETL') {
             steps {
-                sh 'python etl_pandas.py'
+                sh 'python hello.py'
             }
         }
     }

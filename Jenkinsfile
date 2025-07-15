@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clonar repositorio') {
             steps {
-                git 'https://github.com/jBujaico/jenkins-python.git'
+                git branch: 'main', url: 'https://github.com/jBujaico/jenkins-python.git'
             }
         }
 

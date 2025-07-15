@@ -13,8 +13,10 @@ df = pd.DataFrame(data)
 # Calcular ingreso total por persona
 df["ingreso_total"] = df["ventas"] * (1 + df["comisión"])
 
-# Guardar resultado como CSV
-df.to_csv("output/ingresos_finales.csv", index=False)
+print(df)
 
-print("ETL completado. Datos procesados y guardados en 'output/ingresos_finales.csv'")
+# Guardar resultado como CSV
+# df.to_csv("output/ingresos_finales.csv", index=False)
+
+# print("ETL completado. Datos procesados y guardados en 'output/ingresos_finales.csv'")
 
